@@ -11,7 +11,7 @@ const config = {
   siteDescription:
     'Mahasiswa biasa yang ingin berbagi pengalaman dalam bentuk tulisan.',
   siteRss: '/rss.xml',
-  googleAnalyticsID: '',
+  googleAnalyticsID: 'UA-132809816-2',
   disqusShortname: 'rafipriatna',
   postDefaultCategoryID: 'Personal',
   userName: 'rafipriatna',
