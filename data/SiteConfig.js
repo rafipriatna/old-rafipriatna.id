@@ -18,9 +18,6 @@ const config = {
   userEmail: 'root@rafipriatna.id',
   userTwitter: 'rafipriatna23',
   userLocation: 'Jakarta, ID',
-  userAvatar: 'https://api.adorable.io/avatars/150/test.png',
-  userDescription:
-    'Mahasiswa biasa yang ingin berbagi pengalaman dalam bentuk tulisan.',
   menuLinks: [
     {
       name: 'Me',

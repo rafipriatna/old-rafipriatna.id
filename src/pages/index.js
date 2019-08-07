@@ -29,28 +29,6 @@ export default class Index extends Component {
                 yang saya simpan di <a href="https://github.com/rafipriatna">Github saya</a>.
                 </p>
             </div>
-            <div className="social-buttons">
-              <div>
-                <a
-                  className="twitter-follow-button"
-                  href="https://twitter.com/rafipriatna23"
-                  data-size="large"
-                  data-show-screen-name="false"
-                >
-                  Follow @rafipriatna23
-                </a>
-              </div>
-              <div>
-                <GitHubButton
-                  href="https://github.com/rafipriatna"
-                  data-size="large"
-                  data-show-count="true"
-                  aria-label="Follow @rafipriatna on GitHub"
-                >
-                  Follow
-                </GitHubButton>
-              </div>
-            </div>
           </div>
         </div>
 
