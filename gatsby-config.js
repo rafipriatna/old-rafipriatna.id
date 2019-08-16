@@ -28,6 +28,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `rafi-priatna-blog`
+      }
+    },
+    {
       resolve: 'gatsby-plugin-zopfli'
     },
     {

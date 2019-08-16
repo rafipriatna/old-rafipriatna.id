@@ -726,14 +726,14 @@ blockquote {
   }
 }
 
-.note {
+.comments {
   background: $light;
   padding: 2rem 0;
   margin: 1.5rem 0;
   border-top: 2px solid #f0f0f0;
   border-bottom: 2px solid #f0f0f0;
 
-  .note-container {
+  .comments-container {
     background: white;
     border-radius: $border-radius;
     box-shadow: $box-shadow;
