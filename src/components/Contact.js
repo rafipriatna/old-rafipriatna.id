@@ -5,14 +5,7 @@ export default class Contact extends Component {
     return (
       <>
         <h1>Stay in Touch</h1>
-        <p>
-          Contact me via email or social media.
-        </p>
         <ul>
-          <li>
-            <strong>e-Mail</strong>:{' '}
-              <a href="mailto:root@rafipriatna.id">root[at]rafipriatna.id</a>
-          </li>
           <li>
             <strong>Twitter</strong>:{' '}
             <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/rafipriatna23">
