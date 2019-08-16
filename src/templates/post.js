@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../layout'
 import PostTags from '../components/PostTags'
-import Comments from '../components/Comments'
+import Disqus from 'gatsby-plugin-disqus'
 import SEO from '../components/SEO'
 import config from '../../data/SiteConfig'
 import { formatDate, editOnGithub } from '../utils/global'
@@ -26,6 +26,13 @@ export default class PostTemplate extends Component {
 
     if (post.thumbnail) {
       thumbnail = post.thumbnail.childImageSharp.fixed
+    }
+
+    // Disqus
+    let disqusConfig = {
+      url: `https://rafipriatna.id${this.props.location.pathname}`,
+      identifier: `${this.props.location.pathname}`,
+      title: post.title,
     }
 
     const date = formatDate(post.date)
@@ -70,7 +77,11 @@ export default class PostTemplate extends Component {
             </a>
           </div>
         </article>
-        <Comments/>
+        <aside className="comments">
+        <div className="container comments-container">
+            <Disqus config={disqusConfig} />
+        </div>
+      </aside>
       </Layout>
     )
   }

@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import Disqus from 'gatsby-plugin-disqus'
 import config from '../../data/SiteConfig'
-import post from '../templates/post'
 
 export default class Comments extends Component {
   render() {
     let disqusConfig = {
-      url: `${config.siteUrl+post.id}`,
-      identifier: post.id,
+      url: `${config.siteUrl+postNode.id}`,
+      identifier: postNode.id,
       title: post.title,
     }
     return (
