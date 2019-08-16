@@ -6,7 +6,7 @@ import post from '../templates/post'
 export default class Comments extends Component {
   render() {
     let disqusConfig = {
-      url: `${config.siteUrl+post.path}`,
+      url: `${config.siteUrl+post.id}`,
       identifier: post.id,
       title: post.title,
     }
