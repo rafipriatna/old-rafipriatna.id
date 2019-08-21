@@ -165,7 +165,7 @@ public function ceklogin(){
 
         $proses = $this->AuthModel->login($email, $pass);
         // Jika nilai true
-		if ($proses > 0){
+		if ($proses){
 			echo "berhasil";
 		}else{
         // Jika nilai false
@@ -187,16 +187,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class AuthModel extends CI_Model {
 
     public function login($email, $pass){
-        // Cari data yang emailnya sesuai dengan yang dimasukkan user.
+       // Cari data yang emailnya sesuai dengan yang dimasukkan user.
         $this->db->where('email', $email);
-        $sql = $this->db->get('users');
-        $cek = $sql->num_rows();
+        $sql = $this->db->get('tb_pengguna');
+        $row = $sql->row();
         // Jika ada datanya, maka cek passwordnya.
-        if ($cek > 0){
-            $row = $sql->row();
+        if (isset($row)){
             if (password_verify($pass, $row->password)){
-                // Jika password sesuai, kembalikan berupa nilai true ke controller.
-                return true;
+                return $row;
             }
         }
     }
