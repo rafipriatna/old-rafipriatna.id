@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../layout'
-import Contact from '../components/Contact'
+import Kontak from '../components/Kontak'
 import config from '../../data/SiteConfig'
 
-export default class ContactPage extends Component {
+export default class KontakPage extends Component {
   render() {
     return (
       <Layout>
-        <Helmet title={`Contact – ${config.siteTitle}`} />
+        <Helmet title={`Kontak – ${config.siteTitle}`} />
         <div className="container">
-          <Contact />
+          <Kontak />
         </div>
       </Layout>
     )

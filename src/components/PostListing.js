@@ -8,7 +8,6 @@ export default class PostListing extends Component {
   getPostList() {
     const { postEdges } = this.props
     const postList = postEdges
-      .filter(postEdge => postEdge.node.frontmatter.template === 'post')
       .map(postEdge => {
         return {
           path: postEdge.node.fields.slug,
@@ -36,7 +35,7 @@ export default class PostListing extends Component {
             thumbnail = post.thumbnail.childImageSharp.fixed
           }
 
-          const popular = post.categories.includes('Popular')
+          const Populer = post.categories.includes('Populer')
           const date = formatDate(post.date)
           const newest = moment(post.date) > moment().subtract(1, 'months')
 
@@ -53,9 +52,9 @@ export default class PostListing extends Component {
                     <div className="new">New!</div>
                   </div>
                 )}
-                {popular && !simple && !newest && (
+                {Populer && !simple && !newest && (
                   <div className="alert">
-                    <div className="popular">Popular</div>
+                    <div className="Populer">Populer</div>
                   </div>
                 )}
               </div>

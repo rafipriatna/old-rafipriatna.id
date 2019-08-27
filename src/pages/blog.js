@@ -89,9 +89,10 @@ export default class BlogPage extends Component {
               type="text"
               name="searchTerm"
               value={searchTerm}
-              placeholder="Type here to filter posts..."
+              placeholder="Ketik disini..."
               onChange={this.handleChange}
             />
+            <div className="filter-count">{filterCount}</div>
           </div>
           <PostListing postEdges={filteredPosts} />
         </div>
@@ -102,7 +103,11 @@ export default class BlogPage extends Component {
 
 export const pageQuery = graphql`
   query BlogQuery {
-    posts: allMarkdownRemark(limit: 2000, sort: { fields: [fields___date], order: DESC }) {
+    posts: allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [fields___date], order: DESC }
+      filter: { frontmatter: { template: { eq: "post" } } }
+    ) {
       edges {
         node {
           fields {

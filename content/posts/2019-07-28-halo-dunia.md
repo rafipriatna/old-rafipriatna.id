@@ -6,7 +6,7 @@ thumbnail: '../thumbnails/writing.png'
 slug: halo-dunia
 categories:
   - Personal
-  - Popular
+  - Populer
 tags:
   - first
   - origins

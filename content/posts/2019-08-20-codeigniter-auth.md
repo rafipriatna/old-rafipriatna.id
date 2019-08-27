@@ -6,7 +6,7 @@ thumbnail: '../thumbnails/codeigniter.png'
 slug: codeigniter-authentication
 categories:
   - Codeigniter
-  - Popular
+  - Populer
 tags:
   - codeigniter
   - authentication

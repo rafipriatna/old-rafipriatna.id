@@ -5,14 +5,13 @@ import Layout from '../layout'
 import PostListing from '../components/PostListing'
 import ProjectListing from '../components/ProjectListing'
 import projects from '../../data/Projects'
-import GitHubButton from 'react-github-btn'
 import SEO from '../components/SEO'
 import config from '../../data/SiteConfig'
 
 export default class Index extends Component {
   render() {
     const latestPostEdges = this.props.data.latest.edges
-    const popularPostEdges = this.props.data.popular.edges
+    const popularPostEdges = this.props.data.Populer.edges
     
     return (
       <Layout>
@@ -20,31 +19,23 @@ export default class Index extends Component {
         <SEO />
         <div className="container">
           <div className="lead">
-            <h1>Hi, Saya Rafi</h1>
-            <div className="lead-grid">
-              <p>
-                Selamat datang di blog saya!
-                
-                Saya biasanya membuat projek open-source
-                yang saya simpan di <a href="https://github.com/rafipriatna">Github saya</a>.
-                </p>
-            </div>
+            <h1>Welcome!</h1>
           </div>
         </div>
 
         <div className="container">
           <section className="section">
-            <h2>Latest Articles</h2>
+            <h2>Artikel terbaru</h2>
             <PostListing simple postEdges={latestPostEdges} />
           </section>
 
           <section className="section">
-            <h2>Most Popular</h2>
+            <h2>Artikel populer</h2>
             <PostListing simple postEdges={popularPostEdges} />
           </section>
 
           <section className="section">
-            <h2>Open Source Projects</h2>
+            <h2>Proyek sumber terbuka</h2>
             <ProjectListing projects={projects} />
           </section>
         </div>
@@ -85,10 +76,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    popular: allMarkdownRemark(
+    Populer: allMarkdownRemark(
       limit: 6
       sort: { fields: [fields___date], order: DESC }
-      filter: { frontmatter: { categories: { eq: "Popular" } } }
+      filter: { frontmatter: { categories: { eq: "Populer" } } }
     ) {
       edges {
         node {

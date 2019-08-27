@@ -20,7 +20,7 @@ const config = {
   userLocation: 'Jakarta, ID',
   menuLinks: [
     {
-      name: 'Me',
+      name: 'Tentang',
       link: '/me/',
     },
     {
@@ -28,8 +28,8 @@ const config = {
       link: '/blog/',
     },
     {
-      name: 'Contact',
-      link: '/contact/',
+      name: 'Kontak',
+      link: '/kontak/',
     },
   ],
   themeColor: '#3F80FF', // Used for setting manifest and progress theme colors.
