@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `rafipriatna-id`
+        shortname: config.disqusShortname
       }
     },
     {
