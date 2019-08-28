@@ -30,8 +30,8 @@ export default class PostTemplate extends Component {
 
     // Disqus
     let disqusConfig = {
-      url: `${config.siteUrl+location.pathname}`,
-      identifier: post.id,
+      url: `${config.siteUrl+this.props.location.pathname}`,
+      identifier: `${this.props.location.pathname}`,
       title: post.title,
     }
 
