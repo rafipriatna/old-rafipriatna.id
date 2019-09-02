@@ -950,3 +950,39 @@ iframe {
   background: rgba(255, 245, 20, 0.8);
   color: #111;
 }
+
+.bagi-dua {
+  margin-bottom: 40px 0;
+}
+
+.bagi-dua:after {
+  content:"";
+  display: table;
+  clear: both;
+}
+
+.kiri {
+  float: left;
+  width: 50%;
+  padding-right: 10px;
+}
+
+.kanan {
+  float: right;
+  width: 50%;
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .kiri {
+    float: left;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .kanan {
+    float: right;
+    width: 100%;
+    padding: 0;
+  }
+}
