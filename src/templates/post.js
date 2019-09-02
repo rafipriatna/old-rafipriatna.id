@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../layout'
 import PostTags from '../components/PostTags'
-import Disqus from 'gatsby-plugin-disqus'
+import {Disqus, CommentCount } from 'gatsby-plugin-disqus'
 import SEO from '../components/SEO'
 import config from '../../data/SiteConfig'
 import { formatDate, editOnGithub } from '../utils/global'
@@ -57,6 +57,9 @@ export default class PostTemplate extends Component {
               <h1>{post.title}</h1>
               <div className="post-meta">
                 <time className="date">{date}</time>
+                / &nbsp;
+                <CommentCount config={disqusConfig} placeholder={'Comments'} />
+                &nbsp;
                 /
                 <a className="github-link" href={githubLink} target="_blank">
                   Edit on Github ✏️
