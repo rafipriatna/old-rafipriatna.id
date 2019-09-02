@@ -58,7 +58,7 @@ export default class PostTemplate extends Component {
               <div className="post-meta">
                 <time className="date">{date}</time>
                 / &nbsp;
-                <CommentCount config={disqusConfig} placeholder={'Comments'} />
+                <CommentCount config={disqusConfig} placeholder={'0 Comments'} />
                 &nbsp;
                 /
                 <a className="github-link" href={githubLink} target="_blank">
