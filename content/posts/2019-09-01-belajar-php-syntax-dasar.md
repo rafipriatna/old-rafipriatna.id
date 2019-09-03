@@ -163,7 +163,7 @@ Ada banyak operator di php :
 | `/`        | Untuk membagi.                    |
 | `%`        | Untuk mendapatkan hasil bagi.     |
 
-2. Concat, untuk menggabungkan string. Operatornya hanya ada . (titik).
+2. Concat, untuk menggabungkan string.
 
 | Operator   | Fungsi                          |
 | ---------- | ------------------------------- |
@@ -199,7 +199,7 @@ Ada banyak operator di php :
 | `===`      | Sama dengan                                      |
 | `!==`      | Tidak sama dengan.                               |
 
-Logika, untuk pengkondisian.
+6. Logika, untuk pengkondisian.
 
 | Operator   | Fungsi                                           |
 | ---------- | ------------------------------------------------ |
@@ -216,11 +216,25 @@ Logika, untuk pengkondisian.
 echo 2 + 4;
 // Outputnya : 6.
 
+?>
+```
+<div class="filename">index.php</div>
+
+```php
+<?php
+
 // Concat
 $salam = "Selamat pagi ";
 $nama = "Rafi";
 echo $salam . $nama;
 // Outputnya: Selamat pagi Rafi
+
+?>
+```
+<div class="filename">index.php</div>
+
+```php
+<?php
 
 // Assignment
 // Berfungsi untuk menambahkan nilai yang sudah ada.
@@ -230,10 +244,25 @@ $r += 2;
 echo $r;
 // Outputnya: 3
 
+?>
+```
+<div class="filename">index.php</div>
+
+```php
+<?php
+
 // Perbandingan
 // Biasanya untuk pengkondisian, dan tidak mengecek tipe datanya.
 var_dump(10 == "10");
 // Outputnya: bool(true)
+
+?>
+```
+<div class="filename">index.php</div>
+
+```php
+
+<?php
 
 // Identitas
 // Sama seperti perbandingan, tapi mengecek tipe datanya.
