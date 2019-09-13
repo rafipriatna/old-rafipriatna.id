@@ -20,7 +20,8 @@ export default class Index extends Component {
         <SEO />
         <div className="container">
           <div className="lead">
-            <h1>Welcome!</h1>
+            <h2>Hai, saya Rafi!</h2>
+            <p>Terima kasih sudah mampir 😁</p>
           </div>
         </div>
 
