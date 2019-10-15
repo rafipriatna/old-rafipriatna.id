@@ -61,5 +61,18 @@ Simpan, dan muat ulang hypernya.
 Text editor favorit saya adalah Microsoft Visual Studio Code, karena simpel dan punya banyak plugin. Silakan download VSCode [di sini](https://code.visualstudio.com). Setelah dipasang, VSCode akan secara otomatis mendeteksi WSL dan akan merekomendasikan memasang plugin WSL di VSCode. Silakan pasang plugin tersebut supaya antara text editor dan linux subsystem dapat terintegrasi.
 Jika VSCode tidak mendeteksi WSL, kita juga bisa memasang plugin `Remote-WSL` secara manual.
 
+Ganti juga terminal di Visual Studio Code ke WSL. Caranya buka `settings.json` di VSCode lalu tambahkan ini :
+```bash
+"terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe"
+```
+Jika kalian menggunakan zsh seperti saya, tambahkan ini :
+```bash
+ "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "-c",
+        "zsh"
+    ],
+```
+
 ## Penutup
 Selama beberapa hari saya coba saya belum menemukan masalah. Hanya saja membuka ubuntu terasa lama, butuh waktu 1 hingga 3 detik supaya terminal ubuntu nya muncul. Mungkin upgrade ke SSD bisa menyelesaikan masalah ini (?). Jika ada pertanyaan, silakan komentar di artikel ini :D
